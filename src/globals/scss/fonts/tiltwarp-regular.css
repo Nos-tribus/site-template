@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'tiltwarp-regular';
+    src: url('/fonts/tiltwarp-regular.woff2') format('woff2'),
+        url('/fonts/tiltwarp-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

@@ -1,0 +1,146 @@
+.hero {
+
+    --_gradient-start: #943323;
+    --_gradient-end: #f07396;
+
+    @include gradient-background();
+
+    position: relative;
+
+
+    .soleil {
+        pointer-events: none;
+        position: absolute;
+        bottom: 0;
+        left: var(--gap);
+        z-index: 1;
+        overflow: hidden;
+
+        &::before {
+            @include noise-background(#e0aa0c);
+            transform: translateY(200%);
+            animation: moveUp 1s ease-in-out 1s forwards;
+            content: "";
+            display: block;
+            border-radius: 50%;
+            width: clamp(100px, 50vw, 600px);
+            aspect-ratio: 1;
+        }
+    }
+
+    padding-inline: var(--gap-small);
+
+    @include tiny {
+        padding-inline: var(--gap);
+    }
+
+    @include medium {
+        padding-inline: var(--gap);
+    }
+
+    header.header {
+        background: transparent;
+        padding: 0;
+    }
+
+
+    @include medium {
+        padding-inline: var(--gap-large);
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap);
+        padding: var(--gap-small);
+
+        @include medium {
+            gap: var(--gap-large);
+            padding: var(--gap-large);
+        }
+
+        >.surtitre {
+            text-transform: uppercase;
+
+            font-size: var(--font-size-xsmall);
+
+            @include medium {
+                font-size: var(--font-size-small);
+            }
+
+            &::before {
+                margin-right: var(--gap-small);
+                vertical-align: middle;
+                display: inline-block;
+                content: "";
+                width: 2.5rem;
+                border-bottom: 2px solid;
+            }
+        }
+
+        >.titre {
+            display: grid;
+            grid-template-columns: minmax(20vw, 60vw) 1fr;
+            gap: var(--gap-small);
+            text-transform: uppercase;
+
+            h1,
+            h2 {
+                margin: 0;
+                padding: 0;
+                line-height: 1;
+            }
+
+            h1,
+            h2 {
+                font-size: var(--font-step-1);
+                white-space: nowrap;
+            }
+
+            h2 {
+                font-style: italic;
+            }
+
+            @include tiny {
+
+                h1,
+                h2 {
+                    font-size: var(--font-step-1);
+                }
+
+            }
+
+            @include small {
+                gap: var(--gap);
+
+                h1,
+                h2 {
+                    font-size: var(--font-step-5);
+                }
+
+            }
+
+            @include medium {
+
+                h1,
+                h2 {
+                    font-size: var(--font-step-5);
+                }
+
+                img {
+                    scale: 1.5;
+                    transform: translateY(50px);
+                }
+            }
+        }
+    }
+}
+
+
+@keyframes moveUp {
+    to {
+        transform: translateY(50%);
+    }
+}

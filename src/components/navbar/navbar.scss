@@ -1,0 +1,176 @@
+header.header {
+    background: var(--block-background);
+    background-blend-mode: var(--block-background-blend);
+
+    margin: 0;
+    display: grid;
+    grid-template-columns: minmax(100px, 80vw) var(--icone-size) auto;
+
+    gap: var(--gap-small);
+    padding-inline: var(--gap-small);
+
+    height: 75px;
+
+    @include medium {
+        gap: var(--gap);
+        padding-inline: var(--gap);
+
+        height: 125px;
+    }
+
+    @include medium {
+        gap: var(--gap-large);
+        padding-inline: var(--gap-large);
+    }
+
+    @include medium {
+        grid-template-columns: 150px 1fr minmax(10vw, 20vw);
+    }
+
+    a {
+        white-space: nowrap;
+    }
+
+    .burger {
+
+        justify-content: flex-end;
+
+        @include medium {
+            display: none;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        svg {
+            width: var(--icone-size);
+            height: var(--icone-size);
+        }
+    }
+
+    >* {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    >.logo {
+        justify-content: flex-start;
+
+        img {
+            width: 100px;
+            height: 100%;
+            object-fit: contain;
+
+            @include medium {
+                width: 150px;
+            }
+        }
+    }
+
+    nav {
+        @include medium {
+            .logo {
+                display: none;
+            }
+
+            .close {
+                display: none;
+            }
+        }
+
+        ul,
+        li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+
+        ul {
+            flex: 1;
+            display: flex;
+            justify-content: space-between;
+            gap: var(--gap-medium);
+            align-items: center;
+            width: 100%;
+
+            a {
+                font-size: var(--font-size-small);
+                color: var(--block-color);
+            }
+        }
+    }
+
+}
+
+@include before-medium {
+    html:not([data-menu]) header.header {
+        nav {
+
+            .close,
+            .logo {
+                display: none;
+            }
+
+            // ul:not(:has(.selected))>li:not(:nth-child(2)),
+            ul:has(.selected)>li:not(.selected) {
+                display: none;
+            }
+
+            &:not(ul:has(.selected)) {
+                display: none;
+            }
+        }
+
+        header.header {
+            &:has(ul:has(.selected)) {
+                .ctas {
+                    display: none;
+                }
+            }
+        }
+
+    }
+
+    html[data-menu] header.header {
+
+        nav {
+            position: fixed;
+            z-index: 999999999999999;
+            right: 0;
+            top: 0;
+            height: 100vh;
+            width: 100vw;
+            background: var(--block-background);
+            background-blend-mode: var(--block-background-blend);
+            justify-content: center;
+            align-items: center;
+
+            .close {
+                position: absolute;
+                top: var(--gap-large);
+                right: var(--gap-large);
+                cursor: pointer;
+                width: var(--icone-size);
+                height: var(--icone-size);
+            }
+
+            ul {
+                flex-direction: column;
+
+                .logo {
+                    width: 30vw;
+                    height: auto;
+                    margin-bottom: var(--gap-large);
+                }
+
+                a {
+                    font-size: var(--font-size-xlarge);
+                }
+            }
+        }
+
+    }
+}

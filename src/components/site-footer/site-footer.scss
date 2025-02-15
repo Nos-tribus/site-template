@@ -1,0 +1,22 @@
+.site-footer {
+    background-color: #4455a5;
+    /* Bleu similaire à l'image */
+    color: white;
+    text-align: center;
+    padding: var(--gap);
+    font-size: var(--font-size-xsmall);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-small);
+
+    a {
+        color: white;
+        /* Lien contrastant */
+        text-decoration: underline;
+        font-weight: bold;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+}

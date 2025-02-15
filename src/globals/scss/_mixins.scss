@@ -1,0 +1,11 @@
+@mixin gradient-background($gradient-start: var(--_gradient-start), $gradient-end: var(--_gradient-end), $image: url(/images/bruit.png)) {
+    background: linear-gradient(to bottom, #{$gradient-start}, #{$gradient-end}),
+    #{$image};
+    background-blend-mode: var(--block-background-blend);
+}
+
+
+@mixin noise-background($color, $image: url(/images/bruit.png)) {
+    background: $color #{$image};
+    background-blend-mode: var(--block-background-blend);
+}

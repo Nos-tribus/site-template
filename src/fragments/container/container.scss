@@ -1,0 +1,25 @@
+.container {
+    --_background-bouton: #637abe;
+    position: relative;
+    color: var(--color-dark);
+
+    &:after {
+        z-index: 1;
+        content: '';
+        position: absolute;
+        inset: 0;
+        @include gradient-background(#637abe, #f7e1c1);
+        opacity: 0.8;
+    }
+
+
+    >div {
+        position: relative;
+        z-index: 2;
+        min-height: 100vh;
+        max-width: var(--site-width);
+        margin: 0 auto;
+        padding: var(--gap);
+    }
+
+}

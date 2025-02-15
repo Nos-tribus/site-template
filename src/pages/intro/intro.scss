@@ -1,0 +1,25 @@
+.intro {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    height: 100vh;
+    margin-inline: var(--gap);
+
+    >div:not(.video) {
+        height: 10vh;
+    }
+
+    .video {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        >video {
+            width: 80%;
+            height: 100%;
+        }
+
+
+    }
+}
