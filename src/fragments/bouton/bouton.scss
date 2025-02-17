@@ -13,6 +13,7 @@
     &:hover {
         --color: var(--color-for-background-dark);
         --background-color: var(--background-dark);
+        text-decoration: none;
     }
 
     display: inline-block;

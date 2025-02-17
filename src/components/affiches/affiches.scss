@@ -4,9 +4,13 @@
 
     ul {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         gap: var(--gap);
         margin-top: var(--gap);
+
+        @include tiny {
+            grid-template-columns: repeat(2, 1fr);
+        }
 
         @include small {
             grid-template-columns: repeat(3, 1fr);

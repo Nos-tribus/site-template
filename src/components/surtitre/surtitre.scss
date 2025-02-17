@@ -1,6 +1,10 @@
 .surtitre {
     text-transform: uppercase;
 
+    >span {
+        text-transform: initial;
+    }
+
     color: var(--color-accent);
     font-size: var(--font-size-xsmall);
 

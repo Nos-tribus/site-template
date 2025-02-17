@@ -1,0 +1,60 @@
+.brochure {
+    --_background-bouton: var(--color-accent-alt);
+
+    span {
+        text-align: center;
+        line-height: 1.2;
+        padding-inline: var(--gap);
+        margin-bottom: var(--gap);
+    }
+
+    text-align: center;
+
+    @include medium {
+        display: block;
+        position: relative;
+
+        span {
+            position: absolute;
+            top: 20%;
+            left: 0;
+        }
+
+        img {
+            width: 70%;
+            margin-left: 30%;
+        }
+    }
+}
+
+.partners {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+    align-items: center;
+    justify-content: center;
+    padding: var(--gap);
+
+
+    li {
+        max-width: calc((50% + var(--gap)) / 2);
+
+
+
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include medium {
+            max-width: 130px;
+        }
+    }
+
+    img {
+        filter: grayscale(100%) brightness(1.5);
+        width: 64px;
+        height: 64px;
+        object-fit: contain;
+    }
+}

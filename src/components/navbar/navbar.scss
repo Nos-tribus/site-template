@@ -106,6 +106,7 @@ header.header {
 
             &:not(:has(.selected))>li:nth-child(2),
             .selected {
+                color: var(--color-primary);
                 text-transform: uppercase;
             }
 

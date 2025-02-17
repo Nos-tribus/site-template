@@ -3,8 +3,35 @@
     flex-direction: column;
     gap: var(--gap);
 
+    >* {
+        position: relative;
+    }
+
+    &>*:last-child {
+        display: flex;
+        justify-content: center;
+
+        figure {
+            display: block;
+            text-align: center;
+
+            img {
+                display: inline-block;
+            }
+        }
+    }
+
     @include medium {
         display: grid;
         grid-template-columns: 2fr 300px;
     }
+
+    .tobottom {
+        display: flex;
+        align-items: flex-end;
+    }
+}
+
+.deux-colonnes+.deux-colonnes {
+    margin-top: var(--gap);
 }
