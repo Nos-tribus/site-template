@@ -1,0 +1,30 @@
+.surtitre {
+    text-transform: uppercase;
+
+    color: var(--color-accent);
+    font-size: var(--font-size-xsmall);
+
+    // margin-bottom: var(--gap-small);
+
+    margin-left: var(--gap-small);
+
+    @include small {
+        font-size: var(--font-size-small);
+    }
+
+    @include medium {
+        margin-left: var(--gap-large);
+        // margin-bottom: var(--gap-large);
+        font-size: var(--font-size-small);
+    }
+
+    &::before {
+        margin-right: var(--gap-small);
+        vertical-align: middle;
+        display: inline-block;
+        content: "";
+        width: 2.5rem;
+        border-bottom: 2px solid;
+    }
+
+}

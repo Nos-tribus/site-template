@@ -1,0 +1,26 @@
+.affiches {
+    margin-top: var(--gap);
+    color: var(--color-accent);
+
+    ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--gap);
+        margin-top: var(--gap);
+
+        @include small {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        img {
+            width: 100%;
+            height: initial;
+            aspect-ratio: 246/348;
+            object-fit: contain;
+            object-position: center center;
+        }
+
+
+
+    }
+}

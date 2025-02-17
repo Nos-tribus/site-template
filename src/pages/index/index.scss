@@ -3,3 +3,22 @@ body {
     font-family: var(--default-font);
 
 }
+
+
+.page-index {
+    .container {
+        .content {
+            color: var(--color-dark);
+            width: var(--content-width);
+        }
+
+        &:after {
+            z-index: 1;
+            content: '';
+            position: absolute;
+            inset: 0;
+            @include gradient-background(var(--color-accent), #f7e1c1);
+            opacity: 0.8;
+        }
+    }
+}

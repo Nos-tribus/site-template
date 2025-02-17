@@ -1,9 +1,10 @@
 :root {
 
+    --color-accent: var(--color-blue);
+    --color-accent-alt: var(--color-rose);
     --block-background: var(--default-gradient);
     --block-background-blend: difference;
     --block-color: #edd3b0;
 
-    --body-background: var(--background-light);
-    --body-color: var(--color-for-background-light)
+    --body-color: #736656
 }

@@ -1,0 +1,10 @@
+.deux-colonnes {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+
+    @include medium {
+        display: grid;
+        grid-template-columns: 2fr 300px;
+    }
+}

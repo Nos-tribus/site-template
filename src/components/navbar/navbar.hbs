@@ -1,16 +1,21 @@
 <header class="header">
     <a href="/" class="logo">
-        <img src="/images/logo.png" alt="Logo Nos tribus">
+        <img src="/images/logo.png" alt="Logo Nos tribus" />
     </a>
     <div class="burger"><button data-action="toggle-menu">{{svg
-            'burger'}}</button></div>
+            "burger"
+            }}</button></div>
     <nav>
-        <button class="close" data-action="toggle-menu">{{svg 'close'}}</button>
+        <button class="close" data-action="toggle-menu">{{svg "close"}}</button>
         <ul>
             <li><img class="logo" src="/images/logo.png"
-                    alt="Logo Nos tribus"></li>
-            <li class="index"><a href>Accueil</a></li>
-            <li><a href>Production de films</a></li>
+                    alt="Logo Nos tribus" /></li>
+            <li class="index"><a href="/">Accueil</a></li>
+            <li>
+                <a {{menuLink selected "production-de-films.html"}}>
+                    Production de films
+                </a>
+            </li>
             <li><a href>Communication</a></li>
             <li><a href>Projet culturel</a></li>
             <li><a href>Contact</a></li>

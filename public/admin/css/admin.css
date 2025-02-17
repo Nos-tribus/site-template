@@ -92,12 +92,13 @@
 }
 
 
-body:after {
+body.template:after {
+    z-index: 99999999999999;
     display: block;
     background-color: #333333;
     color: white;
     position: fixed;
     left: 0;
     bottom: 0;
-    display: none !important;
+    /* display: none !important; */
 }
