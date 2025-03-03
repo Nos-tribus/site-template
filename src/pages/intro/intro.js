@@ -6,7 +6,8 @@ App.modules["intro"] = (() => {
       const url = lien.href;
       if (!localStorage.getItem("intro")) {
         localStorage.setItem("intro", true);
-        window.location.href = url;
+        lien.click();
+        // window.location.href = url;
       }
     },
     start() {
