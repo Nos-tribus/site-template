@@ -2,6 +2,7 @@ App.modules["intro"] = (() => {
   return {
     async handleIntro() {
       const lien = document.querySelector('[href*="/intro"]');
+      if(!lien) return;
       const url = lien.href;
       if (!localStorage.getItem("intro")) {
         localStorage.setItem("intro", true);
