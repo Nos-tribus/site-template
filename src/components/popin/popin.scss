@@ -89,6 +89,10 @@
                 background-color: var(--color-white-alt);
             }
 
+            .boutons {
+                margin: 0;
+            }
+
             .boutons:has([href=""]) {
                 display: none !important;
             }
