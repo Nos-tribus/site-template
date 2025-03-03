@@ -8,6 +8,12 @@
         gap: var(--gap);
         margin-top: var(--gap);
 
+        button {
+            border: 0;
+            background: none;
+            cursor: pointer;
+        }
+
         @include tiny {
             grid-template-columns: repeat(2, 1fr);
         }
