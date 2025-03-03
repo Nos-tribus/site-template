@@ -1,7 +1,9 @@
 App.modules['popin'] = (() => {
   return {
       start() {
-        document.querySelector('.affiches').addEventListener('click', (e) => {
+        const affiches = document.querySelector('.affiches');
+        if(!affiches) return;
+        affiches.addEventListener('click', (e) => {
           const button  = e.target.closest('button[data-film-id]');
           if(!button) return;
 

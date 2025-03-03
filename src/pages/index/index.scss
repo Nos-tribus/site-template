@@ -9,7 +9,10 @@ body {
     .container {
         .content {
             color: var(--color-dark);
-            width: var(--content-width);
+
+            @include medium {
+                width: var(--content-width);
+            }
         }
 
         &:after {
