@@ -17,7 +17,7 @@
         overflow: hidden;
 
         &::before {
-            @include noise-background(#e0aa0c);
+            @include noise-background-jaune();
             transform: translateY(200%);
             animation: moveUp 1s ease-in-out 1s forwards;
             content: "";
