@@ -6,9 +6,10 @@ body:has(.intro) {
     display: flex;
     flex-direction: column;
     gap: var(--gap);
+    width: 100vw;
     height: 100vh;
 
-    position: relative;
+    position: fixed;
 
 
     &:after {
