@@ -10,7 +10,7 @@
         content: '';
         position: absolute;
         inset: 0;
-        @include noise-background(#fae2c1);
+        @include noise-background-beige();
         opacity: 0.8;
     }
 

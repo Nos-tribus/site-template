@@ -8,4 +8,9 @@
 @mixin noise-background($color, $image: url(/images/bruit.png)) {
     background: $color #{$image};
     background-blend-mode: var(--block-background-blend);
+    background-repeat: no-repeat;
+}
+
+@mixin noise-background-beige() {
+    background: url(/images/bruit-beige.jpg);
 }
