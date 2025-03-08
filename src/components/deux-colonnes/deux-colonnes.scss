@@ -12,6 +12,10 @@
         justify-content: center;
 
         figure {
+            @include medium {
+                margin-top: 10vh;
+            }
+
             display: block;
             text-align: center;
 
