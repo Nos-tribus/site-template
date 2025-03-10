@@ -41,20 +41,23 @@ body:has(.intro) {
         justify-content: center;
 
         margin: 0;
+        position: relative;
 
-
-
-        >video {
-            width: 100%;
+        svg {
+            cursor: pointer;
+            width: 64px;
+            height: 64px;
+            position: absolute;
         }
+
+        >video {}
 
         @include small {
             margin-inline: var(--gap);
 
             video {
-                width: 80%;
-                height: 100%;
                 max-height: 60vh;
+
             }
         }
     }

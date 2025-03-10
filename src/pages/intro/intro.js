@@ -15,6 +15,21 @@ App.modules["intro"] = (() => {
       const video = document.querySelector(".video video");
       if (!video) return;
 
+      const play = document.querySelector(".video svg");
+      play.addEventListener("click", () => {
+        play.remove();
+        video.volume = 0.5;
+        video.play();
+        video.setAttribute("controls", "controls");
+      });
+      // video.addEventListener("click", () => {
+      //   if(video.paused) {
+      //     video.play();
+      //   } else {
+      //     video.pause();
+      //   }
+      // });
+
       // Définir le volume initial à 0
       video.volume = 0;
 
