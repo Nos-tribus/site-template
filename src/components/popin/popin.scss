@@ -76,6 +76,7 @@
             }
 
             @include medium {
+                padding: var(--gap);
                 gap: var(--gap);
 
                 figure {
