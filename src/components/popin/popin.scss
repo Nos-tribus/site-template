@@ -1,7 +1,4 @@
 .popin {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     >div {
         opacity: 0;
@@ -9,6 +6,9 @@
     }
 
     &[open] {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         padding: 0;
         width: 100%;
         max-width: calc(100vw - var(--gap));
