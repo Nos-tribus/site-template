@@ -12,14 +12,16 @@
         justify-content: center;
 
         figure {
+            display: block;
+            text-align: center;
+
             @include medium {
                 margin-top: 10vh;
             }
 
-            display: block;
-            text-align: center;
 
             img {
+                max-height: 50vh;
                 display: inline-block;
             }
         }

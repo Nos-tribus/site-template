@@ -4,9 +4,9 @@
 
     ul {
         display: grid;
-        grid-template-columns: 1fr;
-        gap: var(--gap);
-        margin-top: var(--gap);
+        grid-template-columns: 1fr 1fr;
+        gap: var(--gap-small);
+        margin-top: var(--gap-small);
 
         button {
             border: 0;
@@ -19,6 +19,8 @@
         }
 
         @include small {
+            gap: var(--gap);
+            margin-top: var(--gap);
             grid-template-columns: repeat(3, 1fr);
         }
 
