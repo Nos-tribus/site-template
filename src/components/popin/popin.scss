@@ -11,8 +11,8 @@
         align-items: center;
         padding: 0;
         width: 100%;
-        max-width: calc(100vw - var(--gap));
-        max-height: calc(100vh - var(--gap));
+        width: calc(100vw - var(--gap));
+        height: calc(100vh - var(--gap));
 
         top: 50%;
         left: 50%;
